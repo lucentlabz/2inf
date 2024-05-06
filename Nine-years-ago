@@ -1,0 +1,52 @@
+{ import Foundation
+
+// Function to calculate factorial
+func factorial(_ n: Double) -> Double {
+    if n == 0 {
+        return 1
+    }
+    return n * factorial(n - 1)
+}
+
+// Calculate the result of the equation (0.123456789^987654321.0)
+let result1 = pow(0.123456789, 987654321.0)
+
+// Calculate the result of the equation 987654321.0!
+let result2 = factorial(987654321.0)
+
+print("(0.123456789^987654321.0) = \(result1)")
+print("987654321.0! = \(result2)")
+import Foundation
+
+// Function to calculate factorial
+func factorial(_ n: Double) -> Double {
+    if n == 0 {
+        return 1
+    }
+    return n * factorial(n - 1)
+}
+
+// Function to calculate digital root
+func digitalRoot(_ n: Double) -> Double {
+    var num = n
+    while num >= 10 {
+        var sum: Double = 0
+        while num > 0 {
+            sum += num.truncatingRemainder(dividingBy: 10)
+            num /= 10
+        }
+        num = sum
+    }
+    return num
+}
+
+// Calculate the factorial of 987654321.0
+let factorialResult = factorial(987654321.0)
+
+// Calculate the digital root of the factorial result
+let digitalRootResult = digitalRoot(factorialResult)
+
+print("Digital root of 987654321.0! = \(digitalRootResult)")}
+    }
+}
+
