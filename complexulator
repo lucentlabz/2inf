@@ -1,0 +1,15 @@
+import decimal
+
+# Set the precision very high to handle large calculations
+decimal.getcontext().prec = 5000
+
+# Define the base and the exponent
+base = decimal.Decimal('109876543210.012345678901')
+exponent = decimal.Decimal('123456789')
+
+# Calculate the power
+result = base ** exponent
+
+# Print the result (or its properties, as the result itself might be too large to display meaningfully)
+print("Result (first 100 digits):", str(result)[:100])  # Display the first 100 digits
+print("Result length (number of digits):", len(str(result).split('.')[0]))  # Display the number of digits in the integer part
